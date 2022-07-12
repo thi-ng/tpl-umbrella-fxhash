@@ -1,0 +1,51 @@
+{
+    "name": "@thi.ng/fxhash-tpl",
+    "version": "1.0.0",
+    "private": true,
+    "description": "TODO",
+    "repository": "TODO",
+    "author": "TODO",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "start": "vite --open --host",
+        "build": "tsc && vite build --base='./'",
+        "preview": "vite preview --open --host",
+        "bundle": "yarn build && (cd dist && zip fxh-$(date +%s).zip assets/*.* index.html)"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.3",
+        "cssnano": "^5.1.12",
+        "typescript": "^4.7.4",
+        "vite": "^2.9.14",
+        "vite-plugin-html": "^3.2.0"
+    },
+    "dependencies": {
+        "@thi.ng/adapt-dpi": "^2.1.7",
+        "@thi.ng/api": "^8.3.7",
+        "@thi.ng/date": "^2.3.1",
+        "@thi.ng/dl-asset": "^2.3.5",
+        "@thi.ng/expose": "^1.1.7",
+        "@thi.ng/geom": "^3.4.1",
+        "@thi.ng/hiccup-canvas": "^2.1.16",
+        "@thi.ng/pixel": "^3.4.6",
+        "@thi.ng/random-fxhash": "^0.2.3",
+        "@thi.ng/resolve-map": "^7.1.0",
+        "@thi.ng/transducers": "^8.3.6",
+        "@thi.ng/vectors": "^7.5.7"
+    },
+    "browsersList": [
+        "last 3 chrome versions"
+    ],
+    "browser": {
+        "process": false
+    },
+    "keywords": [
+        "art",
+        "fxhash",
+        "generative",
+        "nft",
+        "thing-umbrella",
+        "typescript"
+    ]
+}
