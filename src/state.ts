@@ -36,14 +36,14 @@ const BASE = resolve<BaseState>(
         minMaxTail: [10, 20],
 
         // pick random color theme ID based on given weights
-        // e.g. "mono" is more likely to be picked than "hot" or "cold":
-        // 4 / (4+2+1) = 4/7 = 57%
-        // 2 / 7 = 29%
-        // 1 / 7 = 14%
+        // e.g. "hot" is more likely to be picked than "dark" or "mono":
+        // hot: 4 / (4+3+2+1) = 40%
+        // dark: 1 / (4+3+2+1) = 10%
         themeId: weightedKey<Record<ThemeID, number>>({
-            mono: 4,
-            hot: 2,
-            cold: 1,
+            cold: 3,
+            dark: 1,
+            hot: 4,
+            mono: 2,
         }),
 
         // pre-lookup theme for later use
@@ -53,7 +53,7 @@ const BASE = resolve<BaseState>(
 
         // maybe we want this param being dependent on color theme too...
         strokeWeight: ({ themeId }: BaseState) =>
-            ({ mono: 20, hot: 40, cold: 10 }[themeId]),
+            ({ cold: 10, dark: 30, hot: 40, mono: 20 }[themeId]),
 
         // conditional choice for selecting number of particles using various PRNG
         // helpers provided by the thi.ng/random-fxhash package (see pkg readme/docs for more details)
