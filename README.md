@@ -8,11 +8,11 @@ This template repo provides a compact, ready-to-go scaffolding for generative
 art projects aimed at the [fx(hash)](https://fxhash.xyz) NFT
 platform/marketplace.
 
-The template has served as basis for most of [the author's own NFT projects]()
-and evolved over time. The template is aimed at
-[TypeScript](https://www.typescriptlang.org/) (but can be easily adapted to
-plain JavaScript) and uses [Vite](https://vitejs.dev/) as dev & build tool,
-providing an altogether great & speedy workflow with minimal fuzz.
+The template has served as basis for most of [the author's own NFT
+projects](https://www.fxhash.xyz/u/toxi) and evolved over time. The template is
+aimed at [TypeScript](https://www.typescriptlang.org/) (but can be easily
+adapted to plain JavaScript) and uses [Vite](https://vitejs.dev/) as dev & build
+tool, providing an altogether great & speedy workflow with minimal fuzz.
 
 In the future I'm aiming to provide an alternative version for more advanced
 uses aimed at hybrid projects using TypeScript, [Zig](https://ziglang.org) and
@@ -40,8 +40,9 @@ following:
 - 2D geometry creation, transformation & drawing
 - basic vector algebra example usage
 
-The best way is to dive into the source code and start reading the various
-detailed comments...
+The best way is to [dive into the source
+code](https://github.com/thi-ng/fxhash-tpl/blob/main/src/) and start reading the
+various detailed comments to get a better overview of the broad concepts used...
 
 ### thi.ng/umbrella packages used
 
