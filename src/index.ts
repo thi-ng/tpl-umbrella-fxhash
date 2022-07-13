@@ -93,7 +93,9 @@ const getScene = ({
     group({ lineCap: "round" }, [
         // filled rect (aka background)
         rect(scaledSize, { fill: theme.bg }),
-        <Group>scale(group({ stroke: "#fff" }, cells), scaledSize),
+        <Group>(
+            scale(group({ stroke: "#fff", fill: "none" }, cells), scaledSize)
+        ),
 
         // now transform all particles and warp groups N particles to the space
         // defined by the different grid cells
