@@ -1,4 +1,5 @@
 import { adaptDPI } from "@thi.ng/adapt-dpi";
+import { rect, Rect } from "@thi.ng/geom";
 import { canvas2d, CanvasContext } from "@thi.ng/pixel";
 import { pick, probability, RND, weightedKey } from "@thi.ng/random-fxhash";
 import { resolve } from "@thi.ng/resolve-map";
@@ -55,18 +56,67 @@ const BASE = resolve<BaseState>(
         strokeWeight: ({ themeId }: BaseState) =>
             ({ cold: 10, dark: 30, hot: 40, mono: 20 }[themeId]),
 
-        // conditional choice for selecting number of particles using various PRNG
-        // helpers provided by the thi.ng/random-fxhash package (see pkg readme/docs for more details)
-        // 80% chance for 50, 100 or 200
-        // 20% chance for a more sparse random amount
-        numParticles: probability(0.8)
-            ? pick([50, 100, 200])
-            : RND.minmaxInt(25, 50),
+        // conditional choice for selecting recursion depth for grid subdivision
+        // various other PRNG helpers are provided by the thi.ng/random-fxhash package
+        // (see pkg readme / docs for more details)
+        // 80% chance for depth 4
+        // 20% chance for depth 3
+        maxDepth: probability(0.8) ? 4 : 3,
+
+        // derive number of particles per grid cell depending on recursion depth
+        clusterScale: ({ maxDepth }: BaseState) => (maxDepth > 3 ? 4 : 5),
+
+        // create recursively subdivided grid cells which will be used to
+        // contain groups of particles during rendering
+        // to keep the geometries responsive to potentially changing canvas
+        // sizes, we too store all coordinates in the normalized [0,0] .. [1,1] space
+        cells: ({ maxDepth }: BaseState) => {
+            const subdiv = (cell: Rect, acc: Rect[], depth: number) => {
+                // only collect leaf nodes/cells at max. depth
+                if (depth >= maxDepth) {
+                    acc.push(cell);
+                    return acc;
+                }
+                // choose (normalized) split position
+                const t = RND.minmax(0.25, 0.75);
+                const [w, h] = cell.size;
+                depth++;
+                // split either horizontally or vertically
+                // (based on current recursion depth)
+                if (depth & 1) {
+                    // horizontal split
+                    subdiv(rect(cell.pos, [w * t, h]), acc, depth);
+                    subdiv(
+                        rect(
+                            [cell.pos[0] + w * t, cell.pos[1]],
+                            [w * (1 - t), h]
+                        ),
+                        acc,
+                        depth
+                    );
+                } else {
+                    // vertical split
+                    subdiv(rect(cell.pos, [w, h * t]), acc, depth);
+                    subdiv(
+                        rect(
+                            [cell.pos[0], cell.pos[1] + h * t],
+                            [w, h * (1 - t)]
+                        ),
+                        acc,
+                        depth
+                    );
+                }
+                return acc;
+            };
+            // start & collect subdivisions
+            return subdiv(rect(1), [], 0);
+        },
 
         // initialize all particles using various other parameters
         // see src/particle.ts for further defails
         particles: ({
-            numParticles,
+            cells,
+            clusterScale,
             minMaxSpeed,
             minMaxSmooth,
             minMaxTail,
@@ -82,7 +132,8 @@ const BASE = resolve<BaseState>(
                         RND.minmax(0.5, 1) ** 1.5 * strokeWidth,
                         RND.minmaxInt(...minMaxTail)
                     ),
-                numParticles
+                // compute number of particles per cluster (1 << 4 = 16 or 1 << 5 = 32)
+                cells.length << clusterScale
             ),
         ],
 

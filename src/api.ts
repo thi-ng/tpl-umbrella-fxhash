@@ -1,3 +1,4 @@
+import type { Rect } from "@thi.ng/geom";
 import type { CanvasContext } from "@thi.ng/pixel";
 import type { Particle } from "./particle";
 import type { THEMES } from "./themes";
@@ -61,13 +62,22 @@ export interface BaseState {
      */
     minMaxTail: [number, number];
     /**
-     * Particle config
+     * Max recursion depth for grid subdivision
      */
-    numParticles: number;
+    maxDepth: number;
+    /**
+     * Binary (bitshift) scale factor for number of particles per grid cell
+     * E.g. a shift by 1 bit = multiplication (or division) by 2
+     */
+    clusterScale: number;
     /**
      * Instantiated particles (see src/particle.ts).
      */
     particles: Particle[];
+    /**
+     * Subdivided grid cells (used as containers for groups of particles)
+     */
+    cells: Rect[];
 }
 
 /**

@@ -15,7 +15,9 @@ import {
 // keep the overall project adaptive to different screen resolutions &
 // resolution changes, all coordinates are defined within the [0,0] .. [1,1]
 // space and then only scaled for rendering (in the main loop)
-const BOUNDS = rectFromCentroid([0.5, 0.5], 0.8);
+// the actual bounding rect here is only covering the central 70% to keep
+// particles more in the center of each cell
+const BOUNDS = rectFromCentroid([0.5, 0.5], 0.7);
 
 /**
  * In general, this file & class has nothing to do with the project template as

@@ -3,12 +3,13 @@ import { downloadCanvas, downloadWithMime } from "@thi.ng/dl-asset";
 import { exposeGlobal } from "@thi.ng/expose";
 import {
     asSvg,
+    Group,
     group,
-    Polyline,
     polyline,
     rect,
     scale,
     svgDoc,
+    warpPoints,
 } from "@thi.ng/geom";
 import { draw } from "@thi.ng/hiccup-canvas";
 import type { State } from "./api";
@@ -82,20 +83,41 @@ const update = () => {
  *
  * @param state
  */
-const getScene = ({ particles, scaledSize, theme }: State) =>
+const getScene = ({
+    particles,
+    scaledSize,
+    theme,
+    cells,
+    clusterScale,
+}: State) =>
     group({ lineCap: "round" }, [
         // filled rect (aka background)
         rect(scaledSize, { fill: theme.bg }),
-        // wrap each particle's tail as polyline and scale to canvas size
-        // (remember: particle positions are using normalized coordinates)
-        ...particles.map(
-            (p) => <Polyline>scale(
-                    polyline(p.tail, {
-                        stroke: p.color,
-                        weight: p.thick,
-                    }),
-                    scaledSize
-                )
+        <Group>scale(group({ stroke: "#fff" }, cells), scaledSize),
+
+        // now transform all particles and warp groups N particles to the space
+        // defined by the different grid cells
+        // remember: both grid cells and particle positions are originally
+        // defined as normalized coordinates. by scaling the grid cell to the
+        // canvas size and then warping particles into these scaled boxes we
+        // automatically scale the particle positions too...
+        ...particles.map((p, i) =>
+            polyline(
+                warpPoints(
+                    p.tail,
+                    // target rect/space
+                    // the bitshift by clusterScale is equivalent to an integer division
+                    // e.g. 23 >> 4 = 23 / 16 = 1
+                    scale(cells[i >> clusterScale], scaledSize),
+                    // source rect/space
+                    rect(1)
+                ),
+                // attributes for each individual polyline
+                {
+                    stroke: p.color,
+                    weight: p.thick,
+                }
+            )
         ),
     ]);
 
@@ -134,7 +156,8 @@ init();
 // expose selected features/traits/params for FXhash platform
 const features = ((<any>window).$fxhashFeatures = {
     theme: STATE!.themeId,
-    particles: STATE!.numParticles,
+    depth: STATE!.maxDepth,
+    particles: STATE!.particles.length,
 });
 
 // print out to console (will be removed for production build)
