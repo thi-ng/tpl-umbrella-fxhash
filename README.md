@@ -1,6 +1,6 @@
 # fx(hash) x thi.ng project template
 
-![example project screenshot](./screenshot.png)
+![example project screenshot](./example.png)
 
 ## About
 
@@ -8,37 +8,38 @@ This template repo provides a compact, ready-to-go scaffolding for generative
 art projects aimed at the [fx(hash)](https://fxhash.xyz) NFT
 platform/marketplace.
 
-The template has served as basis for most of [the author's own NFT
-projects](https://www.fxhash.xyz/u/toxi) and evolved over time. The template is
-aimed at [TypeScript](https://www.typescriptlang.org/) (but can be easily
-adapted to plain JavaScript) and uses [Vite](https://vitejs.dev/) as dev & build
-tool, providing an altogether great & speedy workflow with minimal fuzz.
+The template evolved over time and has served as basis for some of [the author's
+own NFT projects](https://www.fxhash.xyz/u/toxi). The template is aimed at
+[TypeScript](https://www.typescriptlang.org/) (but can be easily adapted to
+plain JavaScript) and uses [Vite](https://vitejs.dev/) as dev & build tool,
+ensuring an altogether great & speedy workflow with minimal fuzz.
 
-In the future I'm aiming to provide an alternative version for more advanced
-uses aimed at hybrid projects using TypeScript, [Zig](https://ziglang.org) and
-[WebAssembly](https://webassembly.org/)...
+(In the future, I'm aiming to provide an alternative version for more advanced
+hybrid projects using TypeScript, [Zig](https://ziglang.org) and
+[WebAssembly](https://webassembly.org/)...)
 
 ### Framework agnostic
 
 Even though several packages from the [thi.ng/umbrella](https://thi.ng/umbrella)
-eco system are used to provide various essential overarching functionality, the
-template is organized in such a way that the main parts are completely framework
-agnostic. You should be able to easily plug-in your own toolkit of choice,
-however I cannot guarantee to be able to provide support for this myself (though
-happy to accept PRs, also in terms of further docs, how-tos, guides etc.)
+ecosystem are used to provide various essential overarching functionality, the
+template is organized in such a way that the main parts are completely
+framework-agnostic. You should be able to easily plug in your own toolkit of
+choice, however I cannot guarantee to be able to provide support for this myself
+(though happy to accept PRs, also in terms of further docs, how-tos, guides
+etc.)
 
 ### Example project
 
 A tiny, fully documented throwaway example sketch is included, illustrating the
 following:
 
-- overall project structure & build commands
-- fxhash related setup
-- static & dynamic configuration and state (re)initialization/handling
-- fxhash PRNG wrapper & utilities
-- canvas & SVG conversion/export/download
+- Overall project structure & build commands
+- FXhash related setup
+- Static & dynamic configuration and state (re)initialization/handling
+- FXhash PRNG wrapper & utilities
+- Canvas & SVG conversion/export/download
 - 2D geometry creation, transformation & drawing
-- basic vector algebra example usage
+- Basic vector algebra example usage
 
 The best way is to [dive into the source
 code](https://github.com/thi-ng/fxhash-tpl/blob/main/src/) and start reading the
@@ -46,12 +47,13 @@ various detailed comments to get a better overview of the broad concepts used...
 
 ### thi.ng/umbrella packages used
 
-Note: Most of these package each have a much wider remit than used here in this small demo project scaffolding... 
+Note: Most of these packages list here each have a much wider remit than
+utilized here in this small demo project scaffolding... 
 
-Depending on which parts of the template you'll be keeping for your own purposes,
-some of these packages can be safely removed. Feel free though to check out some
-of the other 165+ packages in the [thi.ng/umbrella](https://thi.ng/umbrella)
-monorepo...
+Depending on which parts of the template you'll be keeping for your own
+purposes, some of these packages can be safely removed. Feel free though to
+check out some of the other 165+ projects in the
+[thi.ng/umbrella](https://thi.ng/umbrella) monorepo (**NOT a framework!**)...
 
 | Package                                               | Role in this template                         |
 |-------------------------------------------------------|-----------------------------------------------|
@@ -73,10 +75,11 @@ monorepo...
 
 Please consult the [GitHub
 documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-for how to clone this template repo. Once you got it on your local machine do
-the following:
+for how to get started with template repos. Once you got it cloned locally, proceed as follows:
 
 ```bash
+# git clone ...
+
 cd <path-where-you-cloned-this-tpl>
 
 # download all dependencies (can also use npm)
@@ -91,7 +94,7 @@ yarn start
 [Vite](https://vitejs.dev/) (the build tool used here) wraps
 [Rollup](https://rollupjs.org/) to bundle all sources & referenced assets for
 production. Furthermore, all unused code will be removed and the template is
-configured to also minify the HTML wrapper and CSS stylesheets.
+configured to also minify the included HTML wrapper and CSS stylesheets.
 
 ```bash
 # create production build
@@ -118,8 +121,8 @@ Token](https://www.fxhash.xyz/mint-generative) wizard on the FXhash website...
 ## Support / feedback
 
 If you find this template useful and would like to financially support my open
-source work, please consider a small donation via
-[GitHub](https://github.com/sponsors/postspectacular),
+source work, please consider [taking part in the NFT fundraiser]() or a small
+donation via [GitHub](https://github.com/sponsors/postspectacular),
 [Patreon](https://www.patreon.com/thing_umbrella),
 [Tezos](https://tzkt.io/tz1d4ThofujwwaWvxDQHF7VyJfaeR2ay3jhf) or, last but not
 least, via [your next fx(hash)
