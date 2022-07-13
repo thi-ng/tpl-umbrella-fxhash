@@ -121,8 +121,9 @@ Token](https://www.fxhash.xyz/mint-generative) wizard on the FXhash website...
 ## Support / feedback
 
 If you find this template useful and would like to financially support my open
-source work, please consider [taking part in the NFT fundraiser]() or a small
-donation via [GitHub](https://github.com/sponsors/postspectacular),
+source work, please consider [taking part in the NFT
+fundraiser](https://www.fxhash.xyz/generative/16330) or a small donation via
+[GitHub](https://github.com/sponsors/postspectacular),
 [Patreon](https://www.patreon.com/thing_umbrella),
 [Tezos](https://tzkt.io/tz1d4ThofujwwaWvxDQHF7VyJfaeR2ay3jhf) or, last but not
 least, via [your next fx(hash)
