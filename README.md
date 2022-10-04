@@ -108,15 +108,8 @@ yarn bundle
 yarn preview
 ```
 
-Please consult the Vite docs for further information and configuration
-options...
-
-**IMPORTANT NOTE:** Due to
-[fxhash-website#246](https://github.com/fxhash/fxhash-website/issues/246) the
-FXhash sandbox currently doesn't properly deal with ESM module scripts and
-cannot preview your project. However, the generated ZIP can be tested via the
-initial stage of the [Mint Generative
-Token](https://www.fxhash.xyz/mint-generative) wizard on the FXhash website...
+Please consult the [Vite docs](https://vitejs.dev/guide/) for further
+information and configuration options...
 
 ## Support / feedback
 
