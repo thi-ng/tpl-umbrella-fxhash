@@ -42,8 +42,9 @@ following:
 - Basic vector algebra example usage
 
 The best way is to [dive into the source
-code](https://github.com/thi-ng/fxhash-tpl/blob/main/src/) and start reading the
-various detailed comments to get a better overview of the broad concepts used...
+code](https://github.com/thi-ng/tpl-umbrella-fxhash/blob/main/src/) and start
+reading the various detailed comments to get a better overview of the broad
+concepts used...
 
 ### thi.ng/umbrella packages used
 
