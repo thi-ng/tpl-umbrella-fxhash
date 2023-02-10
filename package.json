@@ -1,51 +1,51 @@
 {
-    "name": "@thi.ng/tpl-umbrella-fxhash",
-    "version": "1.0.0",
-    "private": true,
-    "description": "TODO",
-    "repository": "TODO",
-    "author": "TODO",
-    "license": "MIT",
-    "type": "module",
-    "scripts": {
-        "start": "vite --open --host",
-        "build": "tsc && vite build --base='./'",
-        "preview": "vite preview --open --host",
-        "bundle": "yarn build && (cd dist && zip fxh-$(date +%s).zip assets/*.* index.html)"
-    },
-    "devDependencies": {
-        "@types/node": "^18.13.0",
-        "cssnano": "^5.1.14",
-        "typescript": "^4.9.5",
-        "vite": "^4.1.1",
-        "vite-plugin-html": "^3.2.0"
-    },
-    "dependencies": {
-        "@thi.ng/adapt-dpi": "^2.2.8",
-        "@thi.ng/api": "^8.7.2",
-        "@thi.ng/date": "^2.4.4",
-        "@thi.ng/dl-asset": "^2.3.26",
-        "@thi.ng/expose": "^1.1.23",
-        "@thi.ng/geom": "^4.2.3",
-        "@thi.ng/hiccup-canvas": "^2.2.3",
-        "@thi.ng/pixel": "^4.1.3",
-        "@thi.ng/random-fxhash": "^0.2.25",
-        "@thi.ng/resolve-map": "^7.1.23",
-        "@thi.ng/transducers": "^8.3.33",
-        "@thi.ng/vectors": "^7.6.2"
-    },
-    "browsersList": [
-        "last 3 chrome versions"
-    ],
-    "browser": {
-        "process": false
-    },
-    "keywords": [
-        "art",
-        "fxhash",
-        "generative",
-        "nft",
-        "thing-umbrella",
-        "typescript"
-    ]
+	"name": "@thi.ng/tpl-umbrella-fxhash",
+	"version": "1.0.0",
+	"private": true,
+	"description": "TODO",
+	"repository": "TODO",
+	"author": "TODO",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"start": "vite --open --host",
+		"build": "tsc && vite build --base='./'",
+		"preview": "vite preview --open --host",
+		"bundle": "yarn build && (cd dist && zip fxh-$(date +%s).zip assets/*.* index.html)"
+	},
+	"devDependencies": {
+		"@types/node": "^18.13.0",
+		"cssnano": "^5.1.14",
+		"typescript": "^4.9.5",
+		"vite": "^4.1.1",
+		"vite-plugin-html": "^3.2.0"
+	},
+	"dependencies": {
+		"@thi.ng/adapt-dpi": "^2.2.8",
+		"@thi.ng/api": "^8.7.2",
+		"@thi.ng/date": "^2.4.4",
+		"@thi.ng/dl-asset": "^2.3.26",
+		"@thi.ng/expose": "^1.1.23",
+		"@thi.ng/geom": "^4.2.3",
+		"@thi.ng/hiccup-canvas": "^2.2.3",
+		"@thi.ng/pixel": "^4.1.3",
+		"@thi.ng/random-fxhash": "^0.2.25",
+		"@thi.ng/resolve-map": "^7.1.23",
+		"@thi.ng/transducers": "^8.3.33",
+		"@thi.ng/vectors": "^7.6.2"
+	},
+	"browsersList": [
+		"last 3 chrome versions"
+	],
+	"browser": {
+		"process": false
+	},
+	"keywords": [
+		"art",
+		"fxhash",
+		"generative",
+		"nft",
+		"thing-umbrella",
+		"typescript"
+	]
 }

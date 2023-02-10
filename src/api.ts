@@ -12,14 +12,14 @@ import type { THEMES } from "./themes";
 export type ThemeID = keyof typeof THEMES;
 
 export interface Theme {
-    /**
-     * Background color (CSS color string)
-     */
-    bg: string;
-    /**
-     * Choice of foreground colors (CSS color strings)
-     */
-    fg: string[];
+	/**
+	 * Background color (CSS color string)
+	 */
+	bg: string;
+	/**
+	 * Choice of foreground colors (CSS color strings)
+	 */
+	fg: string[];
 }
 
 /**
@@ -33,51 +33,51 @@ export interface Theme {
  * See further information in src/state.ts
  */
 export interface BaseState {
-    /**
-     * Color theme ID
-     */
-    themeId: ThemeID;
-    /**
-     * Actually instantiated color theme.
-     */
-    theme: Theme;
-    /**
-     * Canvas margin (in pixels)
-     */
-    margin: number;
-    /**
-     * Max stroke weight (in pixels)
-     */
-    strokeWeight: number;
-    /**
-     * Particle config
-     */
-    minMaxSpeed: [number, number];
-    /**
-     * Particle config
-     */
-    minMaxSmooth: [number, number];
-    /**
-     * Particle config
-     */
-    minMaxTail: [number, number];
-    /**
-     * Max recursion depth for grid subdivision
-     */
-    maxDepth: number;
-    /**
-     * Binary (bitshift) scale factor for number of particles per grid cell
-     * E.g. a shift by 1 bit = multiplication (or division) by 2
-     */
-    clusterScale: number;
-    /**
-     * Instantiated particles (see src/particle.ts).
-     */
-    particles: Particle[];
-    /**
-     * Subdivided grid cells (used as containers for groups of particles)
-     */
-    cells: Rect[];
+	/**
+	 * Color theme ID
+	 */
+	themeId: ThemeID;
+	/**
+	 * Actually instantiated color theme.
+	 */
+	theme: Theme;
+	/**
+	 * Canvas margin (in pixels)
+	 */
+	margin: number;
+	/**
+	 * Max stroke weight (in pixels)
+	 */
+	strokeWeight: number;
+	/**
+	 * Particle config
+	 */
+	minMaxSpeed: [number, number];
+	/**
+	 * Particle config
+	 */
+	minMaxSmooth: [number, number];
+	/**
+	 * Particle config
+	 */
+	minMaxTail: [number, number];
+	/**
+	 * Max recursion depth for grid subdivision
+	 */
+	maxDepth: number;
+	/**
+	 * Binary (bitshift) scale factor for number of particles per grid cell
+	 * E.g. a shift by 1 bit = multiplication (or division) by 2
+	 */
+	clusterScale: number;
+	/**
+	 * Instantiated particles (see src/particle.ts).
+	 */
+	particles: Particle[];
+	/**
+	 * Subdivided grid cells (used as containers for groups of particles)
+	 */
+	cells: Rect[];
 }
 
 /**
@@ -91,28 +91,28 @@ export interface BaseState {
  * ONLY. EDIT AS YOU SEE FIT!
  */
 export interface State extends BaseState {
-    /**
-     * Current canvas width (in CSS pixels, without {@link State.dpr} applied)
-     */
-    width: number;
-    /**
-     * Current canvas height (in CSS pixels, without {@link State.dpr} applied)
-     */
-    height: number;
-    /**
-     * Canvas size scaled by {@link State.dpr}
-     */
-    scaledSize: [number, number];
-    /**
-     * Window device pixel ratio
-     */
-    dpr: number;
-    /**
-     * Canvas aspect ratio
-     */
-    aspect: number;
-    /**
-     * Canvas element & drawing context container
-     */
-    canvas: CanvasContext;
+	/**
+	 * Current canvas width (in CSS pixels, without {@link State.dpr} applied)
+	 */
+	width: number;
+	/**
+	 * Current canvas height (in CSS pixels, without {@link State.dpr} applied)
+	 */
+	height: number;
+	/**
+	 * Canvas size scaled by {@link State.dpr}
+	 */
+	scaledSize: [number, number];
+	/**
+	 * Window device pixel ratio
+	 */
+	dpr: number;
+	/**
+	 * Canvas aspect ratio
+	 */
+	aspect: number;
+	/**
+	 * Canvas element & drawing context container
+	 */
+	canvas: CanvasContext;
 }
