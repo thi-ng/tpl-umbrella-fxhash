@@ -1,4 +1,4 @@
-import { pointInside, rectFromCentroid, scatter } from "@thi.ng/geom";
+import { pointInside, rectWithCentroid, scatter } from "@thi.ng/geom";
 import { probability, RND } from "@thi.ng/random-fxhash";
 import { repeatedly } from "@thi.ng/transducers";
 import {
@@ -17,7 +17,7 @@ import {
 // space and then only scaled for rendering (in the main loop)
 // the actual bounding rect here is only covering the central 70% to keep
 // particles more in the center of each cell
-const BOUNDS = rectFromCentroid([0.5, 0.5], 0.7);
+const BOUNDS = rectWithCentroid([0.5, 0.5], 0.7);
 
 /**
  * In general, this file & class has nothing to do with the project template as
