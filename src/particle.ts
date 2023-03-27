@@ -1,5 +1,5 @@
 import { pointInside, rectWithCentroid, scatter } from "@thi.ng/geom";
-import { probability, RND } from "@thi.ng/random-fxhash";
+import { RND, probability } from "@thi.ng/random-fxhash";
 import { repeatedly } from "@thi.ng/transducers";
 import {
 	add2,
@@ -8,7 +8,7 @@ import {
 	randMinMax2,
 	randNorm2,
 	sub2,
-	Vec,
+	type Vec,
 } from "@thi.ng/vectors";
 
 // predefined bounding rectangle in normalized coordinate space i.e. in order to
