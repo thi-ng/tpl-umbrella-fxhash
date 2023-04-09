@@ -1,9 +1,9 @@
 {
-	"name": "@thi.ng/tpl-umbrella-fxhash",
+	"name": "TODO",
 	"version": "1.0.0",
 	"private": true,
 	"description": "TODO",
-	"repository": "TODO",
+	"repository": "https://github.com/TODO/TODO",
 	"author": "TODO",
 	"license": "MIT",
 	"type": "module",
@@ -16,23 +16,23 @@
 	"devDependencies": {
 		"@types/node": "^18.15.10",
 		"cssnano": "^6.0.0",
-		"typescript": "^5.0.2",
+		"typescript": "^5.0.4",
 		"vite": "^4.2.1",
 		"vite-plugin-html": "^3.2.0"
 	},
 	"dependencies": {
-		"@thi.ng/adapt-dpi": "^2.2.10",
-		"@thi.ng/api": "^8.7.5",
-		"@thi.ng/date": "^2.4.10",
-		"@thi.ng/dl-asset": "^2.3.30",
-		"@thi.ng/expose": "^1.1.27",
-		"@thi.ng/geom": "^4.4.1",
-		"@thi.ng/hiccup-canvas": "^2.2.12",
-		"@thi.ng/pixel": "^4.1.11",
-		"@thi.ng/random-fxhash": "^0.2.31",
-		"@thi.ng/resolve-map": "^7.1.27",
-		"@thi.ng/transducers": "^8.4.1",
-		"@thi.ng/vectors": "^7.6.10"
+		"@thi.ng/adapt-dpi": "latest",
+		"@thi.ng/api": "latest",
+		"@thi.ng/date": "latest",
+		"@thi.ng/dl-asset": "latest",
+		"@thi.ng/expose": "latest",
+		"@thi.ng/geom": "latest",
+		"@thi.ng/hiccup-canvas": "latest",
+		"@thi.ng/pixel": "latest",
+		"@thi.ng/random-fxhash": "latest",
+		"@thi.ng/resolve-map": "latest",
+		"@thi.ng/transducers": "latest",
+		"@thi.ng/vectors": "latest"
 	},
 	"browsersList": [
 		"last 3 chrome versions"
