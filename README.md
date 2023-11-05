@@ -18,6 +18,8 @@ ensuring an altogether great & speedy workflow with minimal fuzz.
 hybrid projects using TypeScript, [Zig](https://ziglang.org) and
 [WebAssembly](https://webassembly.org/)...)
 
+**The template is currently using the following version of the fxhash project sdk:** [61ac228c](https://github.com/fxhash/fxhash-package/commit/61ac228ce103fcea2e28c365f0facd38f0b8479f)
+
 ### Framework agnostic
 
 Even though several packages from the [thi.ng/umbrella](https://thi.ng/umbrella)
