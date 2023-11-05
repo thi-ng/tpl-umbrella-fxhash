@@ -29,7 +29,7 @@
 		"@thi.ng/geom": "^5.2.14",
 		"@thi.ng/hiccup-canvas": "^2.4.4",
 		"@thi.ng/pixel": "^4.3.1",
-		"@thi.ng/random-fxhash": "^0.3.17",
+		"@thi.ng/random-fxhash": "^0.3.18",
 		"@thi.ng/resolve-map": "^7.1.40",
 		"@thi.ng/transducers": "^8.8.7",
 		"@thi.ng/vectors": "^7.8.1"
