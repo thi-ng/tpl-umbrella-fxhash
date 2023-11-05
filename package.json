@@ -9,9 +9,9 @@
 	"type": "module",
 	"scripts": {
 		"start": "vite --open --host",
-		"build": "tsc && vite build --base='./'",
+		"build": "tsc && vite build --base=./",
 		"preview": "vite preview --open --host",
-		"bundle": "yarn build && (cd dist && zip fxh-$(date +%s).zip assets/*.* index.html)"
+		"bundle": "yarn build && (cd dist && zip fxh-$(date +%s).zip assets/*.* index.html fxhash.js)"
 	},
 	"devDependencies": {
 		"@types/node": "20.8.10",
