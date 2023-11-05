@@ -35,13 +35,13 @@ etc.)
 A tiny, fully documented throwaway example sketch is included, illustrating the
 following:
 
--   Overall project structure & build commands
--   FXhash related setup
--   Static & dynamic configuration and state (re)initialization/handling
--   FXhash PRNG wrapper & utilities
--   Canvas & SVG conversion/export/download
--   2D geometry creation, transformation & drawing
--   Basic vector algebra example usage
+- Overall project structure & build commands
+- FXhash related setup
+- Static & dynamic configuration and state (re)initialization/handling
+- FXhash PRNG wrapper & utilities
+- Canvas & SVG conversion/export/download
+- 2D geometry creation, transformation & drawing
+- Basic vector algebra example usage
 
 The best way is to [dive into the source
 code](https://github.com/thi-ng/tpl-umbrella-fxhash/blob/main/src/) and start
@@ -51,7 +51,7 @@ concepts used...
 ### thi.ng/umbrella packages used
 
 Note: Most of these packages list here each have a much wider remit than
-utilized here in this small demo project scaffolding...
+utilized here in this small demo project scaffolding... 
 
 Depending on which parts of the template you'll be keeping for your own
 purposes, some of these packages can be safely removed. Feel free though to
@@ -59,7 +59,7 @@ check out some of the other 165+ projects in the
 [thi.ng/umbrella](https://thi.ng/umbrella) monorepo (**NOT a framework!**)...
 
 | Package                                               | Role in this template                         |
-| ----------------------------------------------------- | --------------------------------------------- |
+|-------------------------------------------------------|-----------------------------------------------|
 | [@thi.ng/adapt-dpi](https://thi.ng/adapt-dpi)         | Configure canvas for HDPI displays            |
 | [@thi.ng/api](https://thi.ng/api)                     | Useful common & shared type definitions       |
 | [@thi.ng/date](https://thi.ng/date)                   | Timestamp formatter for media downloads       |
@@ -72,6 +72,7 @@ check out some of the other 165+ projects in the
 | [@thi.ng/resolve-map](https://thi.ng/resolve-map)     | Graphbased config & state initialization      |
 | [@thi.ng/transducers](https://thi.ng/transducers)     | Iteration & data transformation               |
 | [@thi.ng/vectors](https://thi.ng/vectors)             | nD Vector algebra                             |
+
 
 ## Getting started
 
