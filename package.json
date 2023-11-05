@@ -23,16 +23,16 @@
 	"dependencies": {
 		"@thi.ng/adapt-dpi": "^2.2.22",
 		"@thi.ng/api": "^8.9.6",
-		"@thi.ng/date": "^2.4.25",
-		"@thi.ng/dl-asset": "^2.3.45",
+		"@thi.ng/date": "^2.5.0",
+		"@thi.ng/dl-asset": "^2.3.46",
 		"@thi.ng/expose": "^1.2.2",
-		"@thi.ng/geom": "^5.2.14",
-		"@thi.ng/hiccup-canvas": "^2.4.4",
-		"@thi.ng/pixel": "^4.3.1",
+		"@thi.ng/geom": "^6.0.1",
+		"@thi.ng/hiccup-canvas": "^2.4.5",
+		"@thi.ng/pixel": "^4.3.2",
 		"@thi.ng/random-fxhash": "^0.3.18",
 		"@thi.ng/resolve-map": "^7.1.40",
-		"@thi.ng/transducers": "^8.8.7",
-		"@thi.ng/vectors": "^7.8.1"
+		"@thi.ng/transducers": "^8.8.8",
+		"@thi.ng/vectors": "^7.8.2"
 	},
 	"browsersList": [
 		"last 3 chrome versions"
