@@ -60,14 +60,13 @@ check out some of the other 165+ projects in the
 
 | Package                                               | Role in this template                         |
 | ----------------------------------------------------- | --------------------------------------------- |
-| [@thi.ng/adapt-dpi](https://thi.ng/adapt-dpi)         | Configure canvas for HDPI displays            |
 | [@thi.ng/api](https://thi.ng/api)                     | Useful common & shared type definitions       |
+| [@thi.ng/canvas](https://thi.ng/canvas)               | Canvas creation & HDPI adaptation             |
 | [@thi.ng/date](https://thi.ng/date)                   | Timestamp formatter for media downloads       |
 | [@thi.ng/dl-asset](https://thi.ng/dl-asset)           | Canvas & SVG export/download                  |
 | [@thi.ng/expose](https://thi.ng/expose)               | Conditionally expose vars during dev only     |
 | [@thi.ng/geom](https://thi.ng/geom)                   | 2D geometry swiss army knife & SVG conversion |
 | [@thi.ng/hiccup-canvas](https://thi.ng/hiccup-canvas) | 2D canvas shape drawing                       |
-| [@thi.ng/pixel](https://thi.ng/pixel)                 | Canvas & context creation                     |
 | [@thi.ng/random-fxhash](https://thi.ng/random-fxhash) | fxhash PRNG wrapper & utils                   |
 | [@thi.ng/resolve-map](https://thi.ng/resolve-map)     | Graphbased config & state initialization      |
 | [@thi.ng/transducers](https://thi.ng/transducers)     | Iteration & data transformation               |

@@ -1,6 +1,5 @@
-import { adaptDPI } from "@thi.ng/adapt-dpi";
+import { adaptDPI, canvas2d, type CanvasContext } from "@thi.ng/canvas";
 import { rect, Rect } from "@thi.ng/geom";
-import { canvas2d, type CanvasContext } from "@thi.ng/pixel";
 import { pick, probability, RND, weightedKey } from "@thi.ng/random-fxhash";
 import { resolve } from "@thi.ng/resolve-map";
 import { repeatedly } from "@thi.ng/transducers";

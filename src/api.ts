@@ -1,5 +1,5 @@
+import type { CanvasContext } from "@thi.ng/canvas";
 import type { Rect } from "@thi.ng/geom";
-import type { CanvasContext } from "@thi.ng/pixel";
 import type { Particle } from "./particle";
 import type { THEMES } from "./themes";
 
