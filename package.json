@@ -11,7 +11,7 @@
 		"start": "vite --open --host",
 		"build": "tsc && vite build --base=./",
 		"preview": "vite preview --open --host",
-		"bundle": "yarn build && (cd dist && zip fxh-$(date +%s).zip assets/*.* index.html fxhash.js)"
+		"bundle": "yarn build && (cd dist && zip fxh-$(date +%s).zip assets/*.* index.html fxhash.min.js)"
 	},
 	"devDependencies": {
 		"@types/node": "20.10.5",
