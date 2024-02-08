@@ -87,7 +87,7 @@ export interface BaseState {
  *
  * See src/state.ts for further details!
  *
- * NOTE: MOST OF THE PARAMS & TYPES LISTED HERE ARE FOR THE STUB CONTENT/SETCH
+ * NOTE: MOST OF THE PARAMS & TYPES LISTED HERE ARE FOR THE STUB CONTENT/SKETCH
  * ONLY. EDIT AS YOU SEE FIT!
  */
 export interface State extends BaseState {
