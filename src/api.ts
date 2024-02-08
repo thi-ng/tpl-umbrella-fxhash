@@ -87,7 +87,7 @@ export interface BaseState {
  *
  * See src/state.ts for further details!
  *
- * NOTE: MOST OF THE PARAMS & TYPES LISTED HERE ARE FOR THE STUB CONTENT/SKETCH
+ * NOTE: MOST OF THE PARAMS & TYPES LISTED HERE ARE FOR THE STUB CONTENT/SETCH
  * ONLY. EDIT AS YOU SEE FIT!
  */
 export interface State extends BaseState {
@@ -115,4 +115,33 @@ export interface State extends BaseState {
 	 * Canvas element & drawing context container
 	 */
 	canvas: CanvasContext;
+}
+
+
+/**
+ * Some usefull variables and function from the @fxhash/project-sdk
+ * Will be exposed in window.$fx
+ */ 
+export interface fxProjectSDK {
+  /** 
+  * A random 64 characters hexadecimal string. This particular variable will be 
+  * hardcoded with a static hash when someone mints a token from your GT
+  */
+  hash: string,
+  /**
+   * trigger for capture module
+   */ 
+  preview: () => void,
+  /**
+   * is TRUE when capture module is running the project
+   */ 
+  isPreview: boolean,
+  /**
+   * sets your projects features
+   */ 
+  features: (features: any) => void,
+  /**
+   * get all features
+   */
+  getFeatures: () => any
 }
