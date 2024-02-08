@@ -119,10 +119,14 @@ export interface State extends BaseState {
 
 
 /**
- * Some usefull variables and function from the @fxhash/project-sdk
+ * Some useful variables and function from the @fxhash/project-sdk
  * Will be exposed in window.$fx
+ * 
+ * @remarks
+ * Reference:
+ * https://fxhash-documentation.super.site/480dd683bdb447ec8a20eeacbe320188
  */ 
-export interface fxProjectSDK {
+export interface FxProjectSDK {
   /** 
   * A random 64 characters hexadecimal string. This particular variable will be 
   * hardcoded with a static hash when someone mints a token from your GT

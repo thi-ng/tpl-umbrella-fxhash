@@ -2,8 +2,8 @@ import { FMT_yyyyMMdd_HHmmss } from "@thi.ng/date";
 import { downloadCanvas, downloadWithMime } from "@thi.ng/dl-asset";
 import { exposeGlobal } from "@thi.ng/expose";
 import {
-	asSvg,
 	Group,
+	asSvg,
 	group,
 	polyline,
 	rect,
@@ -12,14 +12,14 @@ import {
 	warpPoints,
 } from "@thi.ng/geom";
 import { draw } from "@thi.ng/hiccup-canvas";
-import type { State, fxProjectSDK } from "./api";
+import type { FxProjectSDK, State } from "./api";
 import { resolveState } from "./state";
 
 // these declarations ensure TypeScript is aware of these
 // externally defined vars/functions
 declare global {
   interface Window {
-    $fx: fxProjectSDK
+    $fx: FxProjectSDK
   }
 }
 // flag to guard code blocks which are only wanted during development
@@ -50,8 +50,11 @@ const init = () => {
 	// trigger update with new settings
 	update();
 
-	// if needed also trigger fxpreview
+	// if needed also trigger $fx.preview
 	// doing this at this point might not fit every project, YMMV!
+	//
+	// Reference:
+	// https://fxhash-documentation.super.site/480dd683bdb447ec8a20eeacbe320188#41a70f16625f4871a7cc6fb51ea51c5f
 	window.$fx.isPreview && requestAnimationFrame(window.$fx.preview);
 };
 
