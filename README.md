@@ -109,11 +109,6 @@ yarn bundle
 yarn preview
 ```
 
-Note: The [vite-plugin-html](https://github.com/vbenjs/vite-plugin-html) used
-for minifying the HTML in production builds is currently causing deprecation
-warnings in Vite v5+. PRs for an alternative solution are much appreciated.
-Thanks!
-
 Please consult the [Vite docs](https://vitejs.dev/guide/) for further
 information and configuration options...
 
@@ -134,6 +129,7 @@ mint](https://www.fxhash.xyz/doc/artist/pricing-your-project#splitting-the-proce
 
 -   [Karsten Schmidt](https://github.com/postspectacular) (Main author)
 -   [Jean-Frédéric Faust](https://github.com/jffaust)
+-   [Nicolas Lebrun](https://github.com/nclslbrn)
 
 ## License
 
