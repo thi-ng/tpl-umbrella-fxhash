@@ -12,15 +12,16 @@ import {
 	warpPoints,
 } from "@thi.ng/geom";
 import { draw } from "@thi.ng/hiccup-canvas";
-import type { State } from "./api";
+import type { State, fxProjectSDK } from "./api";
 import { resolveState } from "./state";
 
 // these declarations ensure TypeScript is aware of these
 // externally defined vars/functions
-declare var fxhash: string;
-declare var isFxpreview: boolean;
-declare function fxpreview(): void;
-
+declare global {
+  interface Window {
+    $fx: fxProjectSDK
+  }
+}
 // flag to guard code blocks which are only wanted during development
 // any `if (DEBUG) { ... }` code blocks will be removed in production builds
 const DEBUG = process.env.NODE_ENV !== "production";
@@ -51,7 +52,7 @@ const init = () => {
 
 	// if needed also trigger fxpreview
 	// doing this at this point might not fit every project, YMMV!
-	isFxpreview && requestAnimationFrame(fxpreview);
+	window.$fx.isPreview && requestAnimationFrame(window.$fx.preview);
 };
 
 /**
@@ -156,14 +157,14 @@ window.onresize = init;
 init();
 
 // expose selected features/traits/params for FXhash platform
-const features = ((<any>window).$fxhashFeatures = {
+window.$fx.features({
 	theme: STATE!.themeId,
 	depth: STATE!.maxDepth,
 	particles: STATE!.particles.length,
 });
 
 // print out to console (will be removed for production build)
-DEBUG && console.log(fxhash, features);
+DEBUG && console.log(window.$fx.hash, window.$fx.getFeatures());
 
 // expose state as global variable (during development only, for debug purposes
 // in browser console...)
