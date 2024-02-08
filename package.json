@@ -15,7 +15,6 @@
 	},
 	"devDependencies": {
 		"@types/node": "20.10.5",
-		"cssnano": "^6.0.2",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.10",
 		"vite-plugin-html": "^3.2.2"
