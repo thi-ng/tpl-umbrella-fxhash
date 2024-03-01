@@ -12,16 +12,10 @@ import {
 	warpPoints,
 } from "@thi.ng/geom";
 import { draw } from "@thi.ng/hiccup-canvas";
-import type { FxProjectSDK, State } from "./api";
+import "@fxhash/project-sdk";
+import type { State } from "./api";
 import { resolveState } from "./state";
 
-// these declarations ensure TypeScript is aware of these
-// externally defined vars/functions
-declare global {
-  interface Window {
-    $fx: FxProjectSDK
-  }
-}
 // flag to guard code blocks which are only wanted during development
 // any `if (DEBUG) { ... }` code blocks will be removed in production builds
 const DEBUG = process.env.NODE_ENV !== "production";

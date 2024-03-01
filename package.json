@@ -20,6 +20,7 @@
 		"vite-plugin-html": "^3.2.2"
 	},
 	"dependencies": {
+		"@fxhash/project-sdk": "0.0.13",
 		"@thi.ng/canvas": "^0.1.1",
 		"@thi.ng/date": "^2.5.8",
 		"@thi.ng/dl-asset": "^2.3.54",
