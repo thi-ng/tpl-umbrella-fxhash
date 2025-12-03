@@ -14,22 +14,22 @@
 		"bundle": "yarn build && (cd dist && zip fxh-$(date +%s).zip assets/*.* index.html fxhash.min.js)"
 	},
 	"devDependencies": {
-		"@types/node": "24.1.0",
-		"typescript": "^5.8.3",
-		"vite": "^7.0.6",
+		"@types/node": "24.10.1",
+		"typescript": "^5.9.3",
+		"vite": "^7.2.6",
 		"vite-plugin-html": "^3.2.2"
 	},
 	"dependencies": {
-		"@thi.ng/canvas": "^1.0.19",
-		"@thi.ng/date": "^2.7.58",
-		"@thi.ng/dl-asset": "^2.3.115",
-		"@thi.ng/expose": "^1.2.59",
-		"@thi.ng/geom": "^8.2.4",
-		"@thi.ng/hiccup-canvas": "^3.1.67",
-		"@thi.ng/random-fxhash": "^0.3.87",
-		"@thi.ng/resolve-map": "^7.1.108",
-		"@thi.ng/transducers": "^9.6.3",
-		"@thi.ng/vectors": "^8.5.1"
+		"@thi.ng/canvas": "^1.1.2",
+		"@thi.ng/date": "^2.7.72",
+		"@thi.ng/dl-asset": "^2.3.129",
+		"@thi.ng/expose": "^1.2.70",
+		"@thi.ng/geom": "^8.3.8",
+		"@thi.ng/hiccup-canvas": "^3.2.2",
+		"@thi.ng/random-fxhash": "^0.3.98",
+		"@thi.ng/resolve-map": "^7.1.121",
+		"@thi.ng/transducers": "^9.6.18",
+		"@thi.ng/vectors": "^8.6.14"
 	},
 	"browsersList": [
 		"last 3 chrome versions"
